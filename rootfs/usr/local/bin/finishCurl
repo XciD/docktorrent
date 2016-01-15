@@ -8,3 +8,9 @@ seedboxContainerId=CONTAINERID
 host=HOST
 
 curl -v --get --data-urlencode "isFolder=$isFolder" --data-urlencode "label=$label" --data-urlencode "seedboxContainerId=$seedboxContainerId" --data-urlencode "fileName=$*"  $host/api/nas/download
+
+echo "seedboxContainerId : $seedboxContainerId" >> /tmp/xcid.log
+echo "host : $host" >> /tmp/xcid.log
+echo "isFolder : $isFolder" >> /tmp/xcid.log
+echo "label : $label" >> /tmp/xcid.log
+echo "fileName : $*" >> /tmp/xcid.log
