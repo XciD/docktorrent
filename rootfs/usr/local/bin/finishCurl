@@ -5,7 +5,7 @@ label="$2"
 shift 2
 
 seedboxContainerId=CONTAINERID
-host=APP_HOST
+host=APPHOST
 
 curl -v --get --data-urlencode "isFolder=$isFolder" --data-urlencode "label=$label" --data-urlencode "seedboxContainerId=$seedboxContainerId" --data-urlencode "fileName=$*"  $host/api/nas/download
 
