@@ -49,7 +49,7 @@ htpasswd -cb /usr/share/nginx/html/rutorrent/.htpasswd ${USER} ${PASSWORD}
 
 chmod +x /usr/local/bin/finishCurl
 
-sed -i -e s/HOST/${APP_HOST}/g /usr/local/bin/finishCurl
+sed -i -e s/APP_HOST/${APP_HOST}/g /usr/local/bin/finishCurl
 sed -i -e s/CONTAINERID/${CONTAINER_ID}/g /usr/local/bin/finishCurl
 
 # Use s6 to supervise all services
