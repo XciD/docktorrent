@@ -45,5 +45,7 @@ chown -R www-data:www-data /rtorrent
     sed -i '/allow 127.0.0.1/a allow '${AUTH_OFF}';' /etc/nginx/sites-enabled/default
 }
 
+htpasswd -cb /usr/share/nginx/html/rutorrent/.htpasswd ${USER} ${PASSWORD}
+
 # Use s6 to supervise all services
 exec /usr/bin/s6-svscan -t0 /service
