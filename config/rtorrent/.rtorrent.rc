@@ -100,3 +100,5 @@ encoding_list = UTF-8
 # Log to file
 log.open_file = "rtorrent", /var/log/rtorrent.log
 log.add_output = "debug", "rtorrent"
+
+system.method.set_key = event.download.finished,sendToSyno,"execute=/usr/local/bin/finishCurl,$d.is_multi_file=,$d.custom1=,$d.get_base_path="
