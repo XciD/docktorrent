@@ -7,7 +7,7 @@ shift 2
 seedboxContainerId=CONTAINERID
 host=APPHOST
 
-curl -v --get --data-urlencode "isFolder=$isFolder" --data-urlencode --data-urlencode "seedboxContainerId=$seedboxContainerId" --data-urlencode "fileName=$*"  $host/api/rule/$label
+curl -v --get --data-urlencode "isFolder=$isFolder" --data-urlencode "seedboxContainerId=$seedboxContainerId" --data-urlencode "fileName=$*"  $host/api/rule/finish-download/$label
 
 echo "seedboxContainerId : $seedboxContainerId" >> /tmp/xcid.log
 echo "host : $host" >> /tmp/xcid.log
