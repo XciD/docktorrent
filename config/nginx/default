@@ -26,9 +26,9 @@ server {
 	}
 
 	location /downloads {
-	        root /rtorrent/finished
-    		autoindex on;
-    	}
+    	        alias /rtorrent/finished/;
+        		autoindex on;
+   }
 
 	location ~ \.php$ {
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
