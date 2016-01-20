@@ -4,6 +4,8 @@ isFolder="$1"
 label="$2"
 shift 2
 
+chmod -R 777 $*
+
 seedboxContainerId=CONTAINERID
 host=APPHOST
 

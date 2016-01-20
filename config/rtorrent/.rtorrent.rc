@@ -53,7 +53,7 @@ port_range = 45566-45566
 
 # Check hash for finished torrents. Might be usefull until the bug is
 # fixed that causes lack of diskspace not to be properly reported.
-check_hash = yes
+check_hash = no
 
 # Set whether the client should try to connect to UDP trackers.
 use_udp_trackers = yes
