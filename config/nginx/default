@@ -25,6 +25,11 @@ server {
 		try_files $uri $uri/ /index.html;
 	}
 
+	location /downloads {
+	        root /rtorrent/finished
+    		autoindex on;
+    	}
+
 	location ~ \.php$ {
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
 		# NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
