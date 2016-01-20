@@ -6,6 +6,8 @@ mkdir -p /rtorrent/{downloads,finished,watch,.session,rutorrent/user-profiles,ru
 # Change permission to ruTorrent's webserver user
 chown -R www-data:www-data /rtorrent
 
+chmod -R 777 /rtorrent/finished
+
 # Override rTorrent settings
 [ "${IP}" ] && {
     sed -i '/^ip =/d' /root/.rtorrent.rc
