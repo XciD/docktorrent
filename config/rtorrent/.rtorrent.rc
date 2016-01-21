@@ -1,40 +1,24 @@
 #download_rate = 0
 upload_rate = 512
-
 directory = /rtorrent/downloads
-
 session = /rtorrent/.session
-
 schedule = low_diskspace,5,60,close_low_diskspace=100M
-
 #bind = 127.0.0.1
 #bind = rakshasa.no
-
 port_range = 45566-45566
-
 check_hash = no
-
 use_udp_trackers = yes
-
 encryption = allow_incoming,try_outgoing,enable_retry
-
 dht = no
-
 dht_port = 9527
-
 peer_exchange = no
-
 system.file_allocate.set = yes
-
 execute_nothrow = rm,/tmp/rpc.socket
 scgi_local = /tmp/rpc.socket
 schedule = chmod,0,0,"execute=chmod,777,/tmp/rpc.socket"
-
 encoding_list = UTF-8
-
 log.open_file = "rtorrent", /var/log/rtorrent.log
 log.add_output = "debug", "rtorrent"
-
 network.send_buffer.size.set = 1M
 network.receive_buffer.size.set = 4M
 network.max_open_files.set = 192
@@ -46,5 +30,4 @@ min_peers = 40 ; look for more peers if limit doesn't reach 50
 min_peers_seed = 25
 max_uploads = 30
 trackers.numwant.set = -1
-
 system.method.set_key = event.download.finished,sendToSyno,"execute=/usr/local/bin/finishCurl,$d.is_multi_file=,$d.custom1=,$d.get_base_path="
