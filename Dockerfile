@@ -94,7 +94,8 @@ COPY rootfs /
 ENTRYPOINT ["/usr/local/bin/docktorrent"]
 
 # Declare ports to expose
-EXPOSE 80 9527 45566
+EXPOSE 80 9527
+EXPOSE 45000-45100
 
 # Declare volumes
 VOLUME ["/rtorrent", "/var/log"]
