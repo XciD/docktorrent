@@ -35,7 +35,7 @@ chmod -R 777 /rtorrent/finished
 }
 
 [ "${RTORRENT_PORT}" ] && {
-    sed -i '/^port_range =/d-/d' /root/.rtorrent.rc
+    sed -i '/^port_range =/d' /root/.rtorrent.rc
     echo "port_range = ${RTORRENT_PORT}-${RTORRENT_PORT}" >> /root/.rtorrent.rc
 }
 
