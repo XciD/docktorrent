@@ -2,6 +2,8 @@
 upload_rate = 512
 directory = /rtorrent/downloads
 session = /rtorrent/.session
+schedule = untied_directory,5,5,stop_untied=
+schedule = watch_directory,5,5,load_start=/rtorrent/watch/*.torrent
 schedule = low_diskspace,5,60,close_low_diskspace=100M
 #bind = 127.0.0.1
 #bind = rakshasa.no
