@@ -9,7 +9,7 @@ chmod -R 777 "$*"
 seedboxContainerId=CONTAINERID
 host=APPHOST
 
-curl -v --get --data-urlencode "isFolder=$isFolder" --data-urlencode "seedboxContainerId=$seedboxContainerId" --data-urlencode "fileName=$*"  $host/api/rule/finish-download/$label
+curl -v --get --data-urlencode "isFolder=$isFolder" --data-urlencode "seedboxContainerId=$seedboxContainerId" --data-urlencode "fileName=$*"  $host/rule/finish-download/$label
 
 echo "seedboxContainerId : $seedboxContainerId" >> /tmp/xcid.log
 echo "host : $host" >> /tmp/xcid.log
