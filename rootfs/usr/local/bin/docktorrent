@@ -3,6 +3,10 @@
 # Create working directories if not exists
 mkdir -p /rtorrent/{downloads,finished/plex,watch,.session,rutorrent/user-profiles,rutorrent/user-profiles/torrents}
 
+mkdir -p /rtorrent/rutorrent/user-profiles/users/${USER}/settings
+
+cp /usr/local/bin/radio.dat /rtorrent/rutorrent/user-profiles/users/${USER}/settings/
+
 # Change permission to ruTorrent's webserver user
 chown -R www-data:www-data /rtorrent
 
@@ -58,10 +62,6 @@ chmod +x /usr/local/bin/finishCurl
 
 sed -i -e s,APPHOST,${APP_HOST},g /usr/local/bin/finishCurl
 sed -i -e s/CONTAINERID/${CONTAINER_ID}/g /usr/local/bin/finishCurl
-
-mkdir -p /rtorrent/rutorrent/user-profiles/users/${USER}/settings
-
-cp /usr/local/bin/radio.dat /rtorrent/rutorrent/user-profiles/users/${USER}/settings/
 
 # Use s6 to supervise all services
 exec /usr/bin/s6-svscan -t0 /service
