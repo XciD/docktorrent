@@ -5,7 +5,7 @@ mkdir -p /rtorrent/{downloads,finished/plex,watch,.session,rutorrent/user-profil
 
 mkdir -p /rtorrent/rutorrent/user-profiles/users/${USER}/settings
 
-cp /usr/local/bin/radio.dat /rtorrent/rutorrent/user-profiles/users/${USER}/settings/
+cp /usr/local/bin/ratio.dat /rtorrent/rutorrent/user-profiles/users/${USER}/settings/
 
 # Change permission to ruTorrent's webserver user
 chown -R www-data:www-data /rtorrent
