@@ -59,5 +59,9 @@ chmod +x /usr/local/bin/finishCurl
 sed -i -e s,APPHOST,${APP_HOST},g /usr/local/bin/finishCurl
 sed -i -e s/CONTAINERID/${CONTAINER_ID}/g /usr/local/bin/finishCurl
 
+mkdir -p /rtorrent/rutorrent/user-profiles/users/${USER}/settings
+
+cp /usr/local/bin/radio.dat /rtorrent/rutorrent/user-profiles/users/${USER}/settings/
+
 # Use s6 to supervise all services
 exec /usr/bin/s6-svscan -t0 /service
