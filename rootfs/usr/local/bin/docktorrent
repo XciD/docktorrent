@@ -3,7 +3,7 @@
 # Create working directories if not exists
 mkdir -p /rtorrent/{downloads,finished/plex,watch,.session,rutorrent/user-profiles,rutorrent/user-profiles/torrents}
 
-mkdir -p /rtorrent/rutorrent/user-profiles/users/${USER}/settings
+mkdir -p /rtorrent/rutorrent/user-profiles/users/${USER}/{settings,torrents}
 
 cp /usr/local/bin/ratio.dat /rtorrent/rutorrent/user-profiles/users/${USER}/settings/
 
